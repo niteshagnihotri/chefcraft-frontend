@@ -1,18 +1,9 @@
 import React from "react";
-import PrimaryBtnComponent from "../buttons/primary-btn.component";
 import RecipeCardComponent from "./recipe.card";
-import { useRouter } from "next/navigation";
 
 const RecipesComponent = ({ data }: any) => {
-  const router = useRouter();
   return (
-    <div className="flex flex-col space-y-10">
-      <PrimaryBtnComponent
-        type="button"
-        className="w-fit ml-auto rounded-sm shadow-sm"
-        onClick={() => router.push("/recipes/create")}
-        text="Add New Recipe"
-      />
+    <div>
       {data && (
         <div className="grid grid-cols-3 justify-items-stretch gap-16">
           {data &&

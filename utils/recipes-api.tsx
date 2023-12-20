@@ -13,6 +13,14 @@ export async function createRecipe(data: any) {
     return res?.data?.recipes;
   }
   
+  export async function fetchRecipesByQuery(search: string) {
+    const res = await makeRequest(
+      'GET',
+      `/api/recipes/search?query=${search}`
+    );
+    return res?.data?.recipes;
+  }
+  
   export async function updateRecipe(id: string, data: any) {
     const res = await makeRequest('PATCH', `/api/recipes/${id}`, data);
     return res;

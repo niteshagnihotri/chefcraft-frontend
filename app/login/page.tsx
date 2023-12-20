@@ -10,6 +10,7 @@ import { somethingWrong } from "@/utils/errors";
 import Image from "next/image";
 import TextInputComponent from "@/components/inputs/text-input.component";
 import LoadingSpinner from "@/components/buttons/loading-spinner.component";
+import Gallery from "@/public/assets/chef.png";
 
 export default function Login() {
   const {
@@ -51,7 +52,7 @@ export default function Login() {
   return (
     <div className="grid grid-cols-2 items-center gap-8 min-h-full">
       <Image
-        src={"/assets/chef-2.webp"}
+        src={Gallery}
         className="w-full"
         width={500}
         height={500}
