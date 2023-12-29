@@ -20,7 +20,7 @@ const RecipeCardComponent = ({ id, title, image, date_created }: Props) => {
   return (
     <div
       key={id}
-      className="border border-slate-100 rounded-lg shadow-sm space-y-2 max-w-[18rem] cursor-pointer"
+      className="border border-slate-100 rounded-lg shadow-sm space-y-2 sm:min-w-[13rem] max-w-[18rem] cursor-pointer"
       onClick={() => router.push(`/recipes/${id}`)}
     >
       <Image
@@ -30,10 +30,10 @@ const RecipeCardComponent = ({ id, title, image, date_created }: Props) => {
         height={300}
         className={(image ? "w-full object-fit  h-[10rem] " : " w-full h-[10rem] object-center " )+" rounded-md rounded-es-none rounded-ee-none border-b bg-red-100 aspect-video"}
       />
-      <div className="px-4 py-2 pb-5 flex items-center justify-between">
-        <h1 className="text-sm capitalize">{title}</h1>
-        <div className="inline-flex items-center text-gray-600 text-xs">
-          <BsCalendar2Date className="mx-2" />
+      <div className="px-4 pt-2 pb-5 flex items-center justify-between flex-wrap">
+        <h1 className="text-xs font-medium sm:text-sm  capitalize flex-none">{title}</h1>
+        <div className="inline-flex items-center flex-none text-gray-600 text-xs">
+          <BsCalendar2Date className="mr-2" />
           {`${days} `} {`${month} `} {`${year} `}
         </div>
       </div>

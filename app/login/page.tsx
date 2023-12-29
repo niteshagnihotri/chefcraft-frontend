@@ -50,10 +50,10 @@ export default function Login() {
   };
 
   return (
-    <div className="grid grid-cols-2 items-center gap-8 min-h-full">
+    <div className={"grid md:grid-cols-2 items-center gap-8 min-h-full mt-10 md:mt-0"}>
       <Image
         src={Gallery}
-        className="w-full"
+        className="w-full hidden md:block"
         width={500}
         height={500}
         alt="login-cover"
@@ -61,7 +61,7 @@ export default function Login() {
       <div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-full space-y-8 text-sm shadow-xl shadow-gray-50 rounded-md"
+          className="w-full space-y-8 text-sm rounded-md"
         >
           <h1 className="text-xl mt-2 font-semibold"> Welcome Back !</h1>
           <TextInputComponent

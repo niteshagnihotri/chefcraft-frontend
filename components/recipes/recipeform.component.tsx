@@ -107,7 +107,7 @@ const RecipeFormComponent = ({ formData }: any) => {
     <FormProvider {...formMethods}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid grid-cols-2 gap-x-16 gap-y-8 px-4"
+        className="grid md:grid-cols-2 gap-x-16 gap-y-8 xs:px-4 pb-10"
       >
         <div className="grid content-start gap-10">
           <TextInputComponent
@@ -154,7 +154,7 @@ const RecipeFormComponent = ({ formData }: any) => {
             setValue={setValue}
             defaultIngredients={formData?.ingredients}
           />
-          <div className="gap-10 flex ml-auto">
+          <div className="gap-10 flex flex-wrap ml-auto">
             <PrimaryBtnComponent
               onClick={() => reset()}
               type="button"

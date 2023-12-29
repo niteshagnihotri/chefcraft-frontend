@@ -55,7 +55,7 @@ const RecipeIngredient = ({ setValue, defaultIngredients }: Props) => {
         <h1 className="text-[0.8rem] font-medium">
           Ingredients <span className="text-red-500">*</span>
         </h1>
-        <div className="grid grid-cols-3 gap-5 justify-items-stretch">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 justify-items-stretch">
           {ingredients?.map((ingredient: any, index: number) => {
             let checkFlag = existingIngredients?.includes(ingredient._id);
             return (

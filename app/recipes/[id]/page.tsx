@@ -61,7 +61,7 @@ const EditRecipePage = () => {
       {status === "pending" && <LoadingButtonComponent />}
       {status === "success" && (
         <>
-          <div className="w-full flex items-center justify-between">
+          <div className="w-full flex items-center flex-col sm:flex-row space-y-10 sm:space-y-0 justify-between">
             <h1 className="font-semibold text-slate-600">
               Edit {recipe_detail[0]?.title} Recipe
             </h1>
@@ -71,7 +71,7 @@ const EditRecipePage = () => {
               variant="outline"
               text={"Delete"}
               icon={<MdDeleteOutline className="text-lg" />}
-              className="text-xs "
+              className="text-[0.7rem] sm:text-xs ml-auto xs:ml-0"
             />
           </div>
 
