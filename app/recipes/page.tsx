@@ -35,12 +35,12 @@ const RecipesPage = () => {
         <h1>No Data</h1>
       ) : (
         <div className="flex flex-col space-y-16">
-          <div className=" ml-auto flex items-center space-x-4">
+          <div className="w-full sm:justify-end space-y-7 sm:space-y-0 sm:ml-auto flex flex-col sm:flex-row items-center space-x-4">
             <input
               type="text"
               name=""
               onChange={(e) => setSearch(e.target.value)}
-              className="border-2 py-2 text-xs px-4 "
+              className="border-2 py-2 text-xs px-4 w-full sm:w-fit rounded-lg"
               placeholder="Search"
             />
             <PrimaryBtnComponent

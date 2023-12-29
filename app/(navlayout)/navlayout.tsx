@@ -27,7 +27,7 @@ const TopNavLayout = ({ children }: any) => {
 
     return (
       <div className="flex w-full flex-col ">
-        <div className="w-full flex justify-between py-7">
+        <div className="w-full flex justify-between items-center py-7">
           <h1 className="font-semibold text-lg text-red-400">Re<span className="text-gray-500">cipes.com</span></h1>
           {isLogin ? (
             <PrimaryBtnComponent
@@ -36,7 +36,7 @@ const TopNavLayout = ({ children }: any) => {
               onClick={handleLogout}
               icon={<IoIosLogOut className="text-xl"/>}
               variant="outline"
-              className="rounded-sm px-6 border-slate-600 text-slate-600 shadow-sm  font-medium"
+              className="rounded-sm sm:px-6 border-0 sm:border shadow-none sm:border-slate-200 text-slate-600 sm:shadow-sm  font-medium"
             />
           ) : (
             <PrimaryBtnComponent
@@ -44,7 +44,7 @@ const TopNavLayout = ({ children }: any) => {
               text="Login"
               onClick={() => router.push("/login")}
               variant="outline"
-              className="rounded-sm px-8 shadow-sm hover:bg-primary hover:text-white font-medium"
+              className="rounded-sm  px-8 shadow-sm hover:bg-primary hover:text-white font-medium"
             />
           )}
         </div>
